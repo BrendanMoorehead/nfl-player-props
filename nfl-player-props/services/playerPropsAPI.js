@@ -1,9 +1,9 @@
-const axios = require('axios');
+import axios from 'axios';
 
 const BASE_URL = 'https://api.sportsdata.io/v3/nfl/odds/json';
-const API_KEY = '233b7a299fac4620a1a175b74ee3188b';
+const API_KEY = 'df900cfa449c4629b7daf7ee36a6af69';
 
-const fetchPlayerProps = async (scoreid, include='available') => {
+export const fetchPlayerProps = async (scoreid, include='available') => {
     const endpoint = `${BASE_URL}/BettingPlayerPropsByScoreID/${scoreid}?key=${API_KEY}&include=${include}`;
     try{
         const response = await axios.get(endpoint);
@@ -14,5 +14,3 @@ const fetchPlayerProps = async (scoreid, include='available') => {
         return null;
     }
 }
-
-export default fetchPlayerProps;
