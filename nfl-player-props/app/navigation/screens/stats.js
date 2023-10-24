@@ -1,9 +1,9 @@
-import React from 'react'
+import {View, Text} from 'react-native';
 
-const stats = () => {
+const Stats = () => {
   return (
-    <div>stats</div>
+    <View><Text>Stats</Text></View>
   )
 }
 
-export default stats
+export default Stats

@@ -1,9 +1,9 @@
-import React from 'react'
+import {View, Text} from 'react-native';
 
-const leaderboard = () => {
+const Leaderboard = () => {
   return (
-    <div>leaderboard</div>
+    <View><Text>Leaderboard</Text></View>
   )
 }
 
-export default leaderboard
+export default Leaderboard

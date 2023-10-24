@@ -1,9 +1,8 @@
-import React from 'react'
-
-const login = () => {
+import {View, Text} from 'react-native';
+const Login = () => {
   return (
-    <div>login</div>
+    <View><Text>Login</Text></View>
   )
 }
 
-export default login
+export default Login

@@ -1,9 +1,9 @@
-import React from 'react'
+import {View, Text} from 'react-native';
 
-const welcome = () => {
+const Welcome = () => {
   return (
-    <div>welcome</div>
+    <View><Text>Welcome</Text></View>
   )
 }
 
-export default welcome
+export default Welcome

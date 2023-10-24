@@ -1,9 +1,9 @@
-import React from 'react'
+import {View, Text} from 'react-native';
 
-const swiping = () => {
+const Swiping = () => {
   return (
-    <div>swiping</div>
+    <View><Text>Swiping</Text></View>
   )
 }
 
-export default swiping
+export default Swiping

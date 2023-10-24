@@ -1,9 +1,9 @@
-import React from 'react'
+import {View, Text} from 'react-native';
 
-const friends = () => {
+const Friends = () => {
   return (
-    <div>friends</div>
+    <View><Text>Friends</Text></View>
   )
 }
 
-export default friends
+export default Friends
