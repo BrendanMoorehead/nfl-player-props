@@ -22,20 +22,6 @@ const Tab = createBottomTabNavigator();
 
 
 const Navbar = () => {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  useEffect(() =>{
-    async function loadFonts(){
-      await Font.loadAsync({
-        ...Ionicons.font, // This will load the Ionicons font
-      });
-      setFontsLoaded(true);
-    }
-    loadFonts();
-  },[]);
-
-  if (!fontsLoaded) return null;
-  
   return (
         <NavigationContainer
           independent={true}
@@ -48,19 +34,19 @@ const Navbar = () => {
                     let rn = route.name;
 
                     if (rn === friendsName){
-                      iconName = focused ? 'people' : 'people-outline';
+                      iconName = focused ? "people" : "people-outline";
                     }
                     else if (rn === leaderboardName){
-                      iconName = focused ? 'medal' : 'medal-outline';
+                      iconName = focused ? "medal" : "medal-outline";
                     }
                     else if (rn === profileName){
-                      iconName = focused ? 'person' : 'person-outline';
+                      iconName = focused ? "person" : "person-outline";
                     }
                     else if (rn === statsName){
-                      iconName = focused ? 'bar-chart' : 'bar-chart-outline';
+                      iconName = focused ? "bar-chart" : "bar-chart-outline";
                     }
                     else if (rn === swipingName){
-                      iconName = focused ? 'star' : 'star-outline';
+                      iconName = focused ? "star" : "star-outline";
                     }
 
                     return <Ionicons name={iconName} size={size} color={color}/>;
