@@ -16,18 +16,16 @@ const friendsName = 'Friends';
 const leaderboardName = 'Leaderboard';
 const profileName = 'Profile';
 const statsName = 'Stats';
-const swipingName = 'Swiping';
+const swipingName = 'Picks';
 
 const Tab = createBottomTabNavigator();
 
 
-const Navbar = () => {
+const MainContainer = () => {
   return (
-        <NavigationContainer
-          independent={true}
-        >
+          <NavigationContainer independent={true} > 
             <Tab.Navigator
-              initialRoute={friends}
+              initialRouteName={friendsName}
               screenOptions={({route}) => ({
                   tabBarIcon: ({focused, color, size}) => {
                     let iconName;
@@ -51,16 +49,20 @@ const Navbar = () => {
 
                     return <Ionicons name={iconName} size={size} color={color}/>;
                   },
+                  headerShown: false,
               })}
             >
-              <Tab.Screen name={friendsName} component={friends}/>
+              
               <Tab.Screen name={leaderboardName} component={leaderboard}/>
-              <Tab.Screen name={profileName} component={profile}/>
               <Tab.Screen name={statsName} component={stats}/>
               <Tab.Screen name={swipingName} component={swiping}/>
+              <Tab.Screen name={friendsName} component={friends}/>
+              <Tab.Screen name={profileName} component={profile}/>
+              
+              
             </Tab.Navigator>
-        </NavigationContainer>
+            </NavigationContainer>
   )
 }
 
-export default Navbar
+export default MainContainer;
